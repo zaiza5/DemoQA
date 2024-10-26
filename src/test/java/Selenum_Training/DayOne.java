@@ -1,7 +1,6 @@
 package Selenum_Training;
 
 
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -23,9 +22,10 @@ public class DayOne {
 		WebElement uname = driver.findElement(By.xpath("//*[@id='userName']"));
 		uname.sendKeys("testuser");				
 		WebElement upssd = driver.findElement(By.xpath("//*[@id='password-wrapper']"));		
-		upssd.sendKeys("@1983Ch1m0r3");
+		upssd.sendKeys("@test");
 		WebElement uloginbut = driver.findElement(By.xpath("//*[@id='login']"));
 		uloginbut.click();
+		
 	}
 
 }
