@@ -11,7 +11,7 @@ public class GoodlDemo {
 		// TODO Auto-generated method stub
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.get("https://discovery.co.za");
+		driver.get("https://testing.co.co.za");
 		WebElement loginButton = driver.findElement(By.id("js-ddid-btn"));
 		loginButton.click();
 		//login
