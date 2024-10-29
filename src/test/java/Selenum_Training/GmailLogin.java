@@ -18,7 +18,7 @@ public class GmailLogin {
 		
 		//clicking the Sing in button
 		WebElement enterEmail = driver.findElement(By.name("email"));
-		enterEmail.sendKeys("cjmorekhure@gmail.com");		
+		enterEmail.sendKeys("test@gmail.com");		
 		
 		WebElement pssWrd = driver.findElement(By.id("pass"));
 		pssWrd.sendKeys("password1");
