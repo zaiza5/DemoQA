@@ -20,9 +20,11 @@ public class DayOne {
 		System.out.println("The page title is "+ title);
 		
 		WebElement uname = driver.findElement(By.xpath("//*[@id='userName']"));
-		uname.sendKeys("testusers");				
+		uname.sendKeys("testusers");
+		
 		WebElement upssd = driver.findElement(By.xpath("//*[id=\"password\"]"));		
 		upssd.sendKeys("@test");
+		
 		WebElement uloginbut = driver.findElement(By.xpath("//*[@id='login']"));
 		uloginbut.click();
 		
