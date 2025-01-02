@@ -70,14 +70,6 @@ public class AutomationExercise {
 		System.out.println("Account infmation has been created successfully");		
 		
 		
-		
-		
-		//System.out.println("You have successfully typed your details");
-		
-		
-	
-		
-		
 	}
 
 }
