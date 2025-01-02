@@ -23,7 +23,7 @@ public class MouseAction_DragandDrop {
 		action.dragAndDrop(drag, drop).build().perform();
 		
 		String actualText = driver.findElement(By.cssSelector("//div[@id='droppable/default']")).getText();
-		System.out.println("actualText");
+		System.out.println(actualText);
 		
 		
 		

@@ -12,10 +12,8 @@ public class BaseTest {
 			driver.get("https://the-internet.herokuapp.com/");
 			System.out.println(driver.getTitle());
 		}
-
-		public static void main(String[] args) {		//
+		public static void main(String[] args) {		
 			BaseTest test = new BaseTest();
-			test.setup();
-			
+			test.setup();			
 		}
 }

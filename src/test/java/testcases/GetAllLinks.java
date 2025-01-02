@@ -19,7 +19,7 @@ public class GetAllLinks {
 		//Printing the size of the link
 		System.out.println("Number of Links" + AllLinks.size());
 		
-		//Printing the webelement to the console.
+		//Printing the webelement to the console or enhanced for loop.
 		for(WebElement a:AllLinks) {
 			System.out.println(a.getText());
 		}

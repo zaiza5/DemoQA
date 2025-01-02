@@ -25,6 +25,7 @@ public class HandlingDropDown {
 		List<WebElement> allOption = lang.getOptions();		
 		System.out.println(allOption);
 		
+		//enhanced for loop
 		for (WebElement a:allOption) {
 			System.out.println(a.getText());
 		}

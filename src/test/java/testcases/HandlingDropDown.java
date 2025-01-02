@@ -14,15 +14,14 @@ public class HandlingDropDown {
 		driver.manage().window().maximize();
 
 		WebElement dropDownLanguage = driver.findElement(By.id("searchLanguage"));
-		Select lang = new Select(dropDownLanguage);
-		
+		Select lang = new Select(dropDownLanguage);		
+			
 		Thread.sleep(2000);		
 		lang.selectByValue("it");
 		Thread.sleep(2000);
 		lang.selectByIndex(4);
 		Thread.sleep(2000);
-		lang.selectByVisibleText("Afrikaans");
-		
+		lang.selectByVisibleText("Afrikaans");		
 		
 		System.out.println("The Language has been selected.");
 		driver.quit();

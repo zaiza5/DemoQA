@@ -16,9 +16,11 @@ public class GetAllDropdownOption {
 		driver.manage().window().maximize();		
 		driver.get("https://www.wikipedia.org/");
 		
+		//Creating an object of the webelement
 		WebElement langDropdown = driver.findElement(By.id("searchLanguage"));
 		Select lang = new Select(langDropdown);
 		List<WebElement> allLang = driver.findElements(By.tagName("option"));
+		//size of the element
 		System.out.println(allLang.size());
 	
 		//Getting the elemenets

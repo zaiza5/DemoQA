@@ -19,7 +19,7 @@ public class DayOne {
 		System.out.println("The page title is "+ title);
 		
 		driver.findElement(By.xpath("//*[@id='userName']")).sendKeys("testusers");		
-		driver.findElement(By.xpath("//*[id=\"password\"]")).sendKeys("@test");		
+		driver.findElement(By.xpath("//*[@id=\'password\']")).sendKeys("@test");		
 		driver.findElement(By.xpath("//*[@id='login']")).click();
 		
 	}
