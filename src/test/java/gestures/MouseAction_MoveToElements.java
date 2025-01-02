@@ -19,7 +19,7 @@ public class MouseAction_MoveToElements {
 		opt.addArguments("--disable-notifications");
 		WebDriver driver=new ChromeDriver(opt);
 		
-		
+				
 		//maximize window		
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));

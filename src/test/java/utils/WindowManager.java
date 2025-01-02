@@ -1,7 +1,7 @@
 package utils;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.devtools.v126.page.model.NavigatedWithinDocument;
+/*import org.openqa.selenium.devtools.v126.page.model.NavigatedWithinDocument;*/
 
 public class WindowManager {
 	private WebDriver driver;
@@ -10,6 +10,7 @@ public class WindowManager {
 		this.driver = driver;
 	}
 	public void goBack() {
+		this.driver.close();
 	}
 
 	public static void main(String[] args) {

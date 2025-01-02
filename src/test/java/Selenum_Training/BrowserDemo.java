@@ -29,9 +29,6 @@ public class BrowserDemo {
 			System.out.println("URL is loaded correctly");
 		} else {
 			System.out.println("URL loaded incorrectly;");
-		}
-			
-		
+		}		
 	}
-
 }

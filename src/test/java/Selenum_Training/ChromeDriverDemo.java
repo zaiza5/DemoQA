@@ -14,12 +14,9 @@ public class ChromeDriverDemo {
 		System.out.println("Executing after setting");
 		driver.get("https://demoqa.com/elements");
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));		
 		
-		
-		
-		WebElement elem = driver.findElement(By.xpath("//*[@id='item-3']/span"));
-		elem.click();
+		driver.findElement(By.xpath("//*[@id='item-3']/span")).click();
 		
 	
 	

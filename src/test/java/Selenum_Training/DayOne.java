@@ -5,7 +5,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class DayOne {
 
@@ -19,14 +18,9 @@ public class DayOne {
 		String title = driver.getTitle();
 		System.out.println("The page title is "+ title);
 		
-		WebElement uname = driver.findElement(By.xpath("//*[@id='userName']"));
-		uname.sendKeys("testusers");
-		
-		WebElement upssd = driver.findElement(By.xpath("//*[id=\"password\"]"));		
-		upssd.sendKeys("@test");
-		
-		WebElement uloginbut = driver.findElement(By.xpath("//*[@id='login']"));
-		uloginbut.click();
+		driver.findElement(By.xpath("//*[@id='userName']")).sendKeys("testusers");		
+		driver.findElement(By.xpath("//*[id=\"password\"]")).sendKeys("@test");		
+		driver.findElement(By.xpath("//*[@id='login']")).click();
 		
 	}
 

@@ -29,14 +29,9 @@ public class FirstSeleniumTest {
 	
 	@Test
 	public void testloggingIntoApplication() {
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-		
-		WebElement  username = driver.findElement(By.name("username"));
-		username.sendKeys("Admin");
-		
-		WebElement password = driver.findElement(By.name("password"));
-		password.sendKeys("admin123");
-		
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));		
+		driver.findElement(By.name("username")).sendKeys("Admin");		
+		driver.findElement(By.name("password")).sendKeys("admin123");		
 		driver.findElement(By.tagName("button")).click();
 	}
 	

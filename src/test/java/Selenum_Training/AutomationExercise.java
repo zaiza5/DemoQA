@@ -67,22 +67,9 @@ public class AutomationExercise {
 		
 		//create button click
 		driver.findElement(By.xpath("//*[@type=\'submit\'][1]")).click();
-		System.out.println("Account infmation has been created successfully");
+		System.out.println("Account infmation has been created successfully");		
 		
 		
-		
-		
-		
-		
-		
-		
-				
-		
-		
-		
-		
-		
-		System.out.println("day of birth is "+ day.getText());
 		
 		
 		//System.out.println("You have successfully typed your details");

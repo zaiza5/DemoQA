@@ -11,19 +11,14 @@ public class GoodlDemo {
 		// TODO Auto-generated method stub
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.get("https://gmail.co.co.za");
-		WebElement loginButton = driver.findElement(By.id("js-ddid-btn"));
-		loginButton.click();
+		driver.get("https://gmail.com");
+		driver.findElement(By.id("js-ddid-btn")).click();
+		
 		//login
-		WebElement usrNameTxtbox = driver.findElement(By.id("Username"));
-		usrNameTxtbox.sendKeys("cjmorekhure");
+		driver.findElement(By.id("identifierId")).sendKeys("cjmorekhure@gmail.com");		
+		driver.findElement(By.xpath("//*[@id='Password']")).sendKeys("Password1");		
+		driver.findElement(By.xpath("//*[@id='btnLogin']")).click();
 		
-		
-		WebElement usrPsswrd = driver.findElement(By.xpath("//*[@id='Password']"));
-		usrPsswrd.sendKeys("Password1");
-		
-		WebElement clkLginBtn = driver.findElement(By.xpath("//*[@id='btnLogin']"));
-		clkLginBtn.click();
 
 		
 		

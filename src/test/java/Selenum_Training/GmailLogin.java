@@ -17,16 +17,13 @@ public class GmailLogin {
 		driver.get("https://www.facebook.com/");
 		
 		//clicking the Sing in button
-		WebElement enterEmail = driver.findElement(By.name("email"));
-		enterEmail.sendKeys("test@gmail.com");		
-		
-		WebElement pssWrd = driver.findElement(By.id("pass"));
-		pssWrd.sendKeys("password1");
-				
+		driver.findElement(By.name("email")).sendKeys("test@gmail.com");			
+		driver.findElement(By.id("pass")).sendKeys("password1");				
+		System.out.println("typing is completed.");
 		
 		//Click button
-		WebElement clickNextbtn = driver.findElement(By.name("login"));
-		clickNextbtn.click();
+		driver.findElement(By.name("login")).click();
+		System.out.println("The click of a button is successfully.");
 		System.out.println("Login Successfully!");				
 
 	}
