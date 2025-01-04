@@ -23,12 +23,9 @@ public class MouseandKeyboardActions {
 		WebElement blogsMenu = driver.findElement(By.id("blogsmenu"));
 		WebElement seleniumONeByArun = driver.findElement(By.xpath("//*[@id=\"cssmenu\"]/ul/li[2]/ul/li[3]/a/span"));
 		
-		actions.moveToElement(blogsMenu)
-		.moveToElement(seleniumONeByArun)
-		.keyDown(Keys.CONTROL)
-		.click()
-		.keyUp(Keys.CONTROL)
-		.build().perform();		
+		actions.moveToElement(blogsMenu).moveToElement(seleniumONeByArun)
+		.keyDown(Keys.CONTROL).click()
+		.keyUp(Keys.CONTROL).build().perform();		
 	}
 
 } 
