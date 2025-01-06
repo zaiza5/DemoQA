@@ -22,8 +22,7 @@ public class MouseAction_MoveToElements {
 		//Disable any pop up
 		ChromeOptions opt = new ChromeOptions();
 		opt.addArguments("--disable-notifications");
-		WebDriver driver=new ChromeDriver(opt);
-		
+		WebDriver driver=new ChromeDriver(opt);		
 				
 		//maximize window		
 		driver.manage().window().maximize();

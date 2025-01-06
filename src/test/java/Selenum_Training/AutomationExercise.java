@@ -10,13 +10,15 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.Select;
 
 public class AutomationExercise {
+	static ChromeOptions opt;
+	static WebDriver driver;
+	
 
 	public static void main(String[] args) {
 		//Disable any pop up
-			ChromeOptions opt = new ChromeOptions();
+			opt = new ChromeOptions();
 			opt.addArguments("--disable-notifications");
-			WebDriver driver=new ChromeDriver(opt);
-		
+					
 		//WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
