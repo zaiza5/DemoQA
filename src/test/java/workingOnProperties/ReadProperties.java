@@ -19,46 +19,39 @@ public class ReadProperties {
 	public static WebDriver driver;
 	static FileInputStream fis;
 	static Properties config;
-	static Properties objectrepository;
+	
 
 	static Logger log =Logger.getLogger(ReadProperties.class);
 
 	public static void main(String[] args) throws IOException {
 		 
-		
+		//loading the properties file.
 		fis = new FileInputStream("./src/test/resources/properties/config.properties");
 		config = new Properties();
 		config.load(fis);
 		log.info("Config properties file has been loaded.");
-		
-		//login and password
-		fis = new FileInputStream("./src/test/resources/properties/objectrepository.properties");
-		objectrepository = new Properties();
-		objectrepository.load(fis);
-		
-		fis = new FileInputStream("./src/test/resources/properties/log4j.properties");
-		PropertyConfigurator.configure(fis);
 		
 		if (config.getProperty("browser").equalsIgnoreCase("Chrome")) {
 				driver = new ChromeDriver();
 		} 
 		else if(config.getProperty("browser").equalsIgnoreCase("Firefox")){
 				driver = new FirefoxDriver();
-			} else if (config.getProperty("browser").equalsIgnoreCase("Edge")) {
+		} else if (config.getProperty("browser").equalsIgnoreCase("Edge")) {
 				driver = new EdgeDriver();
 			}		
-		
 		driver.manage().window().maximize();
 		log.info("Browser has been maximised");
+		//implicit wait
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Integer.parseInt(config.getProperty("implicit.wait"))));
-		
+		//explicit wait
 		WebDriverWait wait = new WebDriverWait(driver,(Duration.ofSeconds(Integer.parseInt(config.getProperty("explicit.wait")))));
 		
 		driver.get(config.getProperty("testsiteurl"));
 		log.info("Opened url: "+ config.getProperty("testsiteurl"));
 		
 		System.out.println("The program started.");
-				
+		
+		/*
 		driver.findElement(By.id(objectrepository.getProperty("email_ID"))).sendKeys("cjmorekhure@gmail.com");
 		System.out.println("Email captured");
 		
@@ -68,7 +61,7 @@ public class ReadProperties {
 		
 		WebElement login = driver.findElement(By.xpath("loginBtn_XPATH"));
 		login.click();
-		
+		*/
 		
 		System.out.println("login clicked.");
 		System.out.println("The program has completed running.");

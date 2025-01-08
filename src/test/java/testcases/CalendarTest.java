@@ -2,6 +2,7 @@ package testcases;
 
 import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.time.OffsetDateTime;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -23,8 +24,8 @@ public class CalendarTest {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));		
 		try {
 			driver.get(url);
-			String date = new SimpleDateFormat("MM/dd/yyyy").format(Calendar.getInstance().getTime());			
-			driver.findElement(By.id("datepicker")).sendKeys(date);
+			String date = new SimpleDateFormat("MM/dd/yyyy").format((Calendar.getInstance()).getTime());	
+			driver.findElement(By.id("datepicker")).sendKeys(date);//first day of the week
 			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
