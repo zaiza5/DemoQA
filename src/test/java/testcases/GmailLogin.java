@@ -14,13 +14,15 @@ import gestures.Webdriver;
 
 
 public class GmailLogin {
+	public static WebDriver driver;
+	public static WebDriverWait wait;
 	
 	public static void main(String[] args) {
-	WebDriver driver = new ChromeDriver();
+	driver = new ChromeDriver();
 	driver.get("https://google.com");
 	driver.manage().window().maximize();
 	//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+	wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 	
 	
 	driver.findElement(By.xpath("//*[@id=\"gb\"]/div/div[2]/a")).click();	

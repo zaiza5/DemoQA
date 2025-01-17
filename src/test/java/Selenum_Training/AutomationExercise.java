@@ -12,6 +12,9 @@ import org.openqa.selenium.support.ui.Select;
 public class AutomationExercise {
 	static ChromeOptions opt;
 	static WebDriver driver;
+	static WebElement day;
+	static WebElement month;
+	
 	
 
 	public static void main(String[] args) {
@@ -34,12 +37,12 @@ public class AutomationExercise {
 		driver.findElement(By.id("password")).sendKeys("Password1");
 		
 		//Day of birth
-		WebElement day = driver.findElement(By.id("days"));
+		 day = driver.findElement(By.id("days"));
 		Select dayOfBirth = new Select(day);
 		dayOfBirth.selectByIndex(18);
 		
 		//Month of birth
-		WebElement month = driver.findElement(By.id("months"));
+		month = driver.findElement(By.id("months"));
 		Select monthOftheYear = new Select(month);
 		monthOftheYear.selectByIndex(01);
 		

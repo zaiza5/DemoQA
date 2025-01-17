@@ -3,13 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="part1.FirstSeleniumTest">
+      <class name="TestNG.TestNG">
         <methods>
-          <include name="setup"/>
-          <include name="tearDown"/>
-          <include name="testloggingIntoApplication"/>
+          <include name="AddressInfomation"/>
+          <include name="closewindow"/>
+          <include name="CaptureSignupDetails"/>
+          <include name="ExistingUser"/>
+          <include name="SignUpDetails"/>
+          <include name="Config"/>
         </methods>
-      </class> <!-- part1.FirstSeleniumTest -->
+      </class> <!-- TestNG.TestNG -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

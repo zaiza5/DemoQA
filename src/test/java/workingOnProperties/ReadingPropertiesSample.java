@@ -21,7 +21,8 @@ public class ReadingPropertiesSample {
 		//loading the properties
 		fis = new FileInputStream("./src/test/resources/properties/automationexcercise.properties");
 		config = new Properties();
-		config.load(fis);		
+		config.load(fis);
+		
 		//Seting the browser driver
 		if(config.getProperty("browser").equalsIgnoreCase("Chrome")){
 			driver= new ChromeDriver();
@@ -30,6 +31,7 @@ public class ReadingPropertiesSample {
 		}else if(config.getProperty("browser").equalsIgnoreCase("Edge")) {
 			driver = new EdgeDriver();
 		}
+		//which browser is used.
 		System.out.println(config.getProperty("browser"));
 		
 		//normal config
