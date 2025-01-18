@@ -35,7 +35,7 @@ public class TestNG {
 	public void SignUpDetails(){		
 		driver.findElement(By.xpath("//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[4]/a")).click();
 		driver.findElement(By.name("name")).sendKeys("Tester Persons");
-		driver.findElement(By.xpath("//*[@id=\"form\"]/div/div/div[3]/div/form/input[3]")).sendKeys("zaizae_@hotmail.com");	
+		driver.findElement(By.xpath("//*[@id=\"form\"]/div/div/div[3]/div/form/input[3]")).sendKeys("zaiza10_@hotmail.com");	
 		driver.findElement(By.xpath("//button[text()='Signup']")).click();		
 	}
 
@@ -55,11 +55,11 @@ public class TestNG {
 	@Test(priority=3, dependsOnMethods = "CaptureSignupDetails")
 	public void AddressInfomation() {
 		driver.findElement(By.xpath("//input[@id='first_name']")).sendKeys("Chimane");
-		driver.findElement(By.xpath("//input[@id='last_name']")).sendKeys("Morekhure");
+		driver.findElement(By.xpath("//input[@id='last_name']")).sendKeys("Mores");
 		driver.findElement(By.xpath("//input[@id='company']")).sendKeys("Morekhure inc");
 		//address
-		driver.findElement(By.xpath("//input[@id='address1']")).sendKeys("516 Ralihlaba Street");
-		driver.findElement(By.xpath("//input[@id='address2']")).sendKeys("Phadima Section");		
+		driver.findElement(By.xpath("//input[@id='address1']")).sendKeys("516 Test Street");
+		driver.findElement(By.xpath("//input[@id='address2']")).sendKeys("Phark Section");		
 		Select country = new Select(driver.findElement(By.xpath("//select[@id='country']")));
 		country.selectByVisibleText("Singapore");
 		driver.findElement(By.xpath("//input[@id='state']")).sendKeys("Katlehong");	
