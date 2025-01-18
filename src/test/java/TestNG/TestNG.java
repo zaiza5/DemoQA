@@ -24,8 +24,7 @@ import org.testng.asserts.SoftAssert;
 public class TestNG {
 
 	WebDriver driver;
-	@BeforeMethod
-	public void Config(){
+	@Test void Config(){
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));	
@@ -36,7 +35,7 @@ public class TestNG {
 	public void SignUpDetails(){		
 		driver.findElement(By.xpath("//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[4]/a")).click();
 		driver.findElement(By.name("name")).sendKeys("Tester Persons");
-		driver.findElement(By.xpath("//*[@id=\"form\"]/div/div/div[3]/div/form/input[3]")).sendKeys("zaizab_@hotmail.com");	
+		driver.findElement(By.xpath("//*[@id=\"form\"]/div/div/div[3]/div/form/input[3]")).sendKeys("zaizae_@hotmail.com");	
 		driver.findElement(By.xpath("//button[text()='Signup']")).click();		
 	}
 
@@ -52,6 +51,7 @@ public class TestNG {
 		driver.findElement(By.xpath("//input[@id='newsletter']")).click();		
 		driver.findElement(By.xpath("//input[@id='optin']")).click();			
 	}
+	
 	@Test(priority=3, dependsOnMethods = "CaptureSignupDetails")
 	public void AddressInfomation() {
 		driver.findElement(By.xpath("//input[@id='first_name']")).sendKeys("Chimane");
@@ -78,21 +78,12 @@ public class TestNG {
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
-
-		try {
-			Thread.sleep(4000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		}		
 		System.out.println("Test has been completed."); 	
+		driver.quit();
 	}	
 	
-	@AfterMethod
-	public void closewindow() {
-		driver.quit();
-	}
-
 }
+
+
 

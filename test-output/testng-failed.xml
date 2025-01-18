@@ -6,6 +6,7 @@
       <class name="TestNG.TestNG">
         <methods>
           <include name="AddressInfomation"/>
+          <include name="ScreenShort"/>
           <include name="closewindow"/>
           <include name="CaptureSignupDetails"/>
           <include name="SignUpDetails"/>
