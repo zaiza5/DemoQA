@@ -14,7 +14,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -26,17 +28,18 @@ public class TestNG {
 	public void Config(){
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));				
-		driver.get("http://automationexercise.com");		
-	}
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));	
+		driver.get("http://automationexercise.com");			
+	}		
+
 	@Test(priority=1)
 	public void SignUpDetails(){		
 		driver.findElement(By.xpath("//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[4]/a")).click();
 		driver.findElement(By.name("name")).sendKeys("Tester Persons");
-		driver.findElement(By.xpath("//*[@id=\"form\"]/div/div/div[3]/div/form/input[3]")).sendKeys("zaizas_@hotmail.com");	
+		driver.findElement(By.xpath("//*[@id=\"form\"]/div/div/div[3]/div/form/input[3]")).sendKeys("zaizab_@hotmail.com");	
 		driver.findElement(By.xpath("//button[text()='Signup']")).click();		
 	}
-	
+
 	@Test(priority=2,dependsOnMethods = "SignUpDetails")
 	public void CaptureSignupDetails() {
 		driver.findElement(By.xpath("//input[@id='id_gender1']")).click();
@@ -76,30 +79,20 @@ public class TestNG {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		System.out.println("Test has been completed."); 	
+
 		try {
 			Thread.sleep(4000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		}
-
-	@Test(priority=6)
-	public void ExistingUser() {		
-		
-		String popupMessage = driver.findElement(By.xpath("//p[text()='Email Address already exist!']")).getText();	
-		String accountcreated = driver.findElement(By.xpath("//b[text()='Account Created!']")).getText();
-		if(popupMessage.equalsIgnoreCase("Email Address already exist!")) {
-			System.out.println("User exist");
-		}else if(accountcreated.equalsIgnoreCase("Account Created!")){
-			System.out.println("User has been added successfully");
-		}
-	}
+		System.out.println("Test has been completed."); 	
+	}	
+	
 	@AfterMethod
 	public void closewindow() {
-		driver.close();
+		driver.quit();
 	}
-	
+
 }
 

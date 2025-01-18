@@ -8,7 +8,6 @@
           <include name="AddressInfomation"/>
           <include name="closewindow"/>
           <include name="CaptureSignupDetails"/>
-          <include name="ExistingUser"/>
           <include name="SignUpDetails"/>
           <include name="Config"/>
         </methods>
